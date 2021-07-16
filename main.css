@@ -109,11 +109,12 @@ canvas{
   .skills-container{
     display:flex;
     flex-direction: column;
- }
- .skill{
-  width: 100%;
-  text-align: justify;
-}
+    
+  }
+  .skill{
+    width: 100%;
+    text-align: justify;
+  }
 }
  .portfolio{
      width: 100%;
@@ -186,6 +187,16 @@ canvas{
 }
 
 @media (max-width: 800px) {
+  .projects {
+    padding: 0;
+  }
+  .projects h1{
+    padding: 5%;
+  }
+  .projects-nav h2{
+    text-align: center;
+    font-size: 14px;
+ }
   .portfolio {
     grid-template-columns: repeat(1, minmax(350px, 1fr));
   }
