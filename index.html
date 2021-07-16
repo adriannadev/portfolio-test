@@ -3,6 +3,7 @@
 	<head>
 		<title>Adrianna</title>
 		<meta charset="utf-8">
+		<link rel="icon" href="img/favicon.ico">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link rel="preconnect" href="https://fonts.googleapis.com"> 
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -20,7 +21,9 @@
 					<li class="nav-item" data-menuanchor="skills"><a href="#skills" class="nav-link"">Skills</a></li>|
 					<li class="nav-item" data-menuanchor="about"><a href="#about" class="nav-link">About</a></li>|
 					<li class="nav-item" data-menuanchor="projects"><a href="#projects" class="nav-link">Projects</a></li>|
-					<li class="nav-item" data-menuanchor="contact"><a href="#contact" class="nav-link">Contact</a></li>
+					<li class="nav-item"><a href="mailto:addie.nosal@gmail.com"><i class="fas fa-envelope"></i></a></li> | 
+					<li class="nav-item"><a href="https://github.com/adriannadev" target="_blank"><i class="fab fa-github"></i></a></li> | 
+					<li class="nav-item"><a href="https://www.linkedin.com/in/adriannadev/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
 	
 				</ul>
 			</nav>
@@ -67,8 +70,11 @@
 		</div>
 		</div>
 		<div class="section" data-anchor="about">
-			<div class = "content" >
+			<div class = "content about" >
 			<h1> Who am I?</h1>
+			<h2> A creative developer based in UK</h2>
+			<div class="about-me">
+			<div class="about-me-body">
 			<p>In 2018, I graduated with First Class in BSc Computer Science and Multimedia from Queen Mary, 
 				University in London. I'm currently working as a software engineer in finance. However, 
 				having studied design at Goldsmiths before, I want to combine my creativity with enthusiasm for 
@@ -80,15 +86,22 @@
 					After my graduation, I went to Seoul, South Korea for a year, where I was teaching English.
 					I love meeting new people, exploring different cultures, traditions and of course eating local foods.
 				</p>
-
 			</div>
+				<img class="about-me-img" src="img/work.jpg" alt="">
 			</div>
-		<div class="section fp-section fp-auto-height" data-anchor="projects">
-			<div class = "content active fp-slides" >
+		</div>
+			</div>
+		<div class="section" data-anchor="projects">
+			<div class = "content" >
+				<div id="projects-nav"> 
 			<h1> Projects</h1>
-			<p class="section-subtitle section-subtitle-type">
-				web development </p>
-			<div class="portfolio slide">
+			<h2><span class="section-subtitle" onclick="showWeb()">
+				web development</span> | 
+				<span class="section-subtitle" onclick="showGame()">
+					game development </span>
+				</h2>
+			</div>
+			<div id="webdev" class="portfolio">
 				<div class="portfolio-item">
 					<div class="portfolio-item-info portoflio-overlay"><h3>Ecommerce app</h3>
 					<p>shoe shop app </p>
@@ -96,6 +109,14 @@
 					<a href="https://github.com/adriannadev/shoe-shop" target="_blank">View on GitHub <i class="fas fa-long-arrow-alt-right"></i></a>
 					<a href="https://myshoes-shop.herokuapp.com" target="_blank" >View app<i class="fas fa-long-arrow-alt-right"></i></a></div>
 					<img src="img/shoeshop.png" class="portfolio-img"> 
+				</div>
+				<div class="portfolio-item">
+					<div class="portfolio-item-info portoflio-overlay"><h3>E-bike design demo</h3>
+						<p>design prototype</p>
+						<p>HTML + CSS</p>
+						<a href="https://github.com/adriannadev/ebikedemo" target="_blank">View on GitHub <i class="fas fa-long-arrow-alt-right"></i></a>
+						<a href="https://swytch.netlify.app/index.html" target="_blank" >View app<i class="fas fa-long-arrow-alt-right"></i></a></div>
+						<img src="img/swytch.png" class="portfolio-img"> 
 				</div>
 				<div class="portfolio-item">
 					<div class="portfolio-item-info portoflio-overlay"><h3>Top Secret</h3>
@@ -112,6 +133,15 @@
 						<a href="https://github.com/adriannadev/Ideaz" target="_blank">View on GitHub <i class="fas fa-long-arrow-alt-right"></i></a></div>
 					<img src="img/ideaz.png" class="portfolio-img"> 
 				</div>
+				<div class="portfolio-item">
+					<div class="portfolio-item-info portoflio-overlay"><h3>Porsche model</h3>
+						<p>threejs 3D model app</p>
+						<p>HTMl + CSS + threejs</p>
+						<a href="https://github.com/adriannadev/porsche-model" target="_blank">View on GitHub <i class="fas fa-long-arrow-alt-right"></i></a>
+						<a href="https://adriannadev.github.io/porsche-model/" target="_blank" >View app<i class="fas fa-long-arrow-alt-right"></i></a></div>
+
+						<img src="img/porsche.png" class="portfolio-img"> 
+				</div>
 				
 				<div class="portfolio-item"> 
 					<div class="portfolio-item-info portoflio-overlay"><h3>To Do List</h3>
@@ -123,9 +153,8 @@
 						<img src="img/todolist.png" class="portfolio-img"> 
 				</div>
 			</div>
-				<p class="section-subtitle section-subtitle-type">
-					game development </p>
-					<div class="portfolio slide">
+
+					<div id="gamedev" class="portfolio">
 						<div class="portfolio-item">
 							<div class="portfolio-item-info portoflio-overlay"><h3>corona killer</h3>
 							<p>3d rails shooter</p>
@@ -150,43 +179,36 @@
 							</div>
 							<img src="img/zombie.png" class="portfolio-img"> 
 						</div>
-						<div class="portfolio-item">
-							<div class="portfolio-item-info portoflio-overlay" ><h3>...and more to come!</h3>
+						<!-- <div class="portfolio-item">
+							<div class="portfolio-item-info" ><h3>...and more to come!</h3>
 								<p>I am constantly working on new projects so keep an eye out for updates.</p>
 								<p>Also for my other small projects check out my github.</p>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				
 			</div>
 		</div>
-		<div class="section" data-anchor="contact">
-			<div class = "content">
-			<h1> Feel free to get in touch.</h1>
-			<p>For enquiries and CV message me here:</p>
-            <a href="mailto:addie.nosal@gmail.com" class="footer-link" >addie.nosal@gmail.com</a>
-            <ul class="social-list">
-                <li class="social-list-item">
-                    <a class="social-list-link" href="https://github.com/adriannadev" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-                <li class="social-list-item">
-                    <a class="social-list-link" href="mailto:addie.nosal@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </li>
-
-            </ul>
-		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js" integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script>
+	<script type="application/javascript">
+
+		function showWeb(){
+			document.getElementById('webdev').style.display='grid';
+			document.getElementById('gamedev').style.display='none';
+		}
+
+		function showGame(){
+			document.getElementById('gamedev').style.display='grid';
+			document.getElementById('webdev').style.display='none';
+		}
+
 		var myFullpage = new fullpage('#fullpage', {
 		navigation: true,
 		anchors: ['home', 'skills', 'about', 'projects', 'contact'],
 		menu: '#menu',
-		slidesNavigation: true
+		slidesNavigation: true,
+		responsiveWidth: 1024
 
 	});
 </script>

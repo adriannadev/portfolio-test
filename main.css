@@ -1,4 +1,8 @@
-
+:root {
+  --clr-bg: #1e272e;
+  --clr-text: #ededed;
+  --clr-accent: #ea8685;
+}
 html {
     scroll-behavior: smooth;
     width: 100vw;
@@ -6,12 +10,16 @@ html {
   }
   body {
     background-color: #f0f0f0;
-    color: #444;
+    color: rgb(37, 36, 36);
     font-family: 'Roboto Mono', monospace;
     padding-top: 5vh;
 }
 a {
     color: #99154E;
+    text-decoration: none;
+}
+a:hover{
+  color: #F38BA0;
 }
 header{
     top: 0;
@@ -28,11 +36,6 @@ header{
     color: #99154E;
     width: 600px;
     margin: 0 auto;
-    /* z-index: 99;
-    height: 5vh;
-    width: 100%;
-    position:fixed; */
-
   }
   .nav-list {
     justify-content: space-evenly;
@@ -43,13 +46,10 @@ header{
     padding: 1em 2em;
   }
   .nav-link {
-    text-decoration: none;
+
     text-align: center;
     font-weight: bold;
     text-transform: lowercase;
-  }
-  .nav-link:hover {
-    color: #F38BA0;
   }
 
   @media (max-width: 800px) {
@@ -64,12 +64,9 @@ header{
 
 }
 #fullpage{
-    /* width: 100vw; */
     z-index: 20;
     position: absolute;
-    /* padding: 120px 0px; */
-    /* width: 100%; */
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
 
 
 }
@@ -78,28 +75,18 @@ canvas{
     top: 5vh;
     left: 0;
     position: fixed;
-    /* top:10vh;
-    left:0; */
-    /* z-index: 1; */
-    /* margin:0;
-    height: 100vh;
-    width: 100%;
-    position:fixed; */
 }
 
 .section {
-    /* margin: 10vh 20vw; */
     width: 100vw;
-    /* height: 100vh; */
-    margin-top: 5vh;
-    padding: 3%;
-
-
+    /* margin-top: 5vh; */
 
 }
 .content {
+    margin: 3%;
     padding: 3%;
-    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
 }
 
 @media (max-width: 800px) {
@@ -111,9 +98,136 @@ canvas{
     } */
  }
 
- .portfolio{
-     display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
-     justify-content: space-between;
+
+ .skills-container{
+    display:flex;
+    flex-direction: row;
  }
+ .skill{
+   width: 30%;
+ }
+ .skill h3 {
+  text-align: center;
+ }
+ .portfolio{
+     width: 100%;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+ }
+
+ .section-subtitle {
+    display: inline-block;
+    cursor: pointer;
+ }
+ .section-subtitle:hover {
+  color: #ea8785c5;
+ }
+ .portfolio-item {
+  margin: 20px;
+  position: relative;
+  font-weight: var(--fw-reg);
+  border: 3px solid #ea8785c5;
+}
+
+.portoflio-overlay {
+  position: absolute;
+  top: 0;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #141a1f;
+  display: block;
+  justify-content: center;
+}
+
+.portfolio-item-info {
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-text);
+  font-size: 1em;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-align: center;
+}
+.portfolio-item:hover .portoflio-overlay {
+  opacity: 0.9;
+}
+.portfolio-item h3 {
+  color: var(--clr-accent);
+}
+.portfolio-item a {
+  text-decoration: none;
+  display: block;
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+}
+
+.portfolio-item a:hover {
+  color: var(--clr-text);
+}
+.portfolio-item p {
+  margin-top: 0.2em;
+}
+
+.portfolio-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 800px) {
+  .portfolio {
+    grid-template-columns: repeat(1, minmax(350px, 1fr));
+  }
+  .portoflio-overlay {
+    position: relative;
+    top: 0;
+    opacity: 0.9;
+    height: 20%;
+  }
+  .portfolio-item {
+    margin: 20px 5px;
+  }
+  .portfolio-item-info {
+    padding: 1.2em;
+  }
+  .portfolio-item p {
+    margin: 0.2em auto;
+    font-size: 0.8em;
+  }
+  .portfolio-item a {
+    font-size: 0.9em;
+  }
+}
+
+#gamedev {
+  display: none;
+}
+
+.social-list-link{
+  display: inline;
+}
+footer {
+  position: relative;
+  z-index: 99;
+}
+
+.about-me {
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: row;
+}
+.about-me-body{
+  width: 80%;
+  margin:0;
+}
+.about-me-img {
+  /* position: relative;
+  margin: 0; */
+  max-height: 400px;
+}
