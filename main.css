@@ -54,7 +54,7 @@ header{
 
   @media (max-width: 800px) {
     header{
-      height: 6vh;
+      height: 5vh;
     }
     .nav {
       width: 80%;
