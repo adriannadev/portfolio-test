@@ -54,7 +54,7 @@ header{
 
   @media (max-width: 800px) {
     header{
-      height: 7vh;
+      height: 6vh;
     }
     .nav {
       width: 80%;
@@ -196,11 +196,8 @@ canvas{
     height: 20%;
     /* padding: 5%; */
   }
-  /* .portfolio-item {
-    margin: 20px 5px;
-  } */
 .portfolio-item-info {
-    padding: 2% 0;;
+    padding: 2% 0;
   }
 }
 
