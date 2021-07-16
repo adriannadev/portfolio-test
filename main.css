@@ -53,9 +53,12 @@ header{
   }
 
   @media (max-width: 800px) {
+    header{
+      height: 5vh;
+    }
     .nav {
       width: 80%;
-      padding: 1em;
+      padding: .7em;
     }
     .nav-list{
         padding: 0;
@@ -89,11 +92,7 @@ canvas{
     background-color: rgb(255, 255, 255);
 }
 
-@media (max-width: 800px) {
-  .content{
-    padding: 10%;
- }
-}
+/* */
 
  .skills-container{
     display:flex;
