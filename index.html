@@ -106,7 +106,7 @@
 				<div class="portfolio-item">
 					<div class="portfolio-item-info portoflio-overlay"><h3>Ecommerce app</h3>
 					<p>shoe shop app </p>
-					<p>MERN stack: MongoDB, Express.js, React.js, Node.js</p>
+					<p>MongoDB, Express.js, React.js, Node.js</p>
 					<a href="https://github.com/adriannadev/shoe-shop" target="_blank">View on GitHub <i class="fas fa-long-arrow-alt-right"></i></a>
 					<a href="https://myshoes-shop.herokuapp.com" target="_blank" >View app<i class="fas fa-long-arrow-alt-right"></i></a></div>
 					<img src="img/shoeshop.png" class="portfolio-img"> 
@@ -319,7 +319,12 @@
 			function init( ) {
 
 				camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 10000 );
-				camera.position.set( 0, -300, 900 );
+				if (window.innerWidth>1024){
+					camera.position.set( 0, -300, 900 );
+				} else {
+					camera.position.set( 0, 0, 0 );
+				}
+				
 
 				scene = new THREE.Scene();
 				scene.background = new THREE.Color( 0xf0f0f0 );
