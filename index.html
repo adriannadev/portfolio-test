@@ -338,14 +338,14 @@
 				const colors = [ 0xF0D9E7, 0xF38BA0, 0xF3BAD6 ];
 				const geometry = new THREE.BoxGeometry( 10, 10, 10 );
 
-				for ( let i = 0; i < 500; i ++ ) {
+				for ( let i = 0; i < 700; i ++ ) {
 
 					const layer = ( i % 3 );
 
 					const object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: colors[ layer ] } ) );
 
-					object.position.x = Math.random() * window.innerWidth - window.innerWidth/2 ;
-					object.position.y = Math.random() * window.innerHeight - window.innerHeight/2;
+					object.position.x = Math.random() * 2000- 1000;
+					object.position.y = Math.random() * 2000 - 1000
 					object.position.z = Math.random() * 800 - 400;
 
 					object.rotation.x = Math.random() * 2 * Math.PI;
@@ -356,9 +356,6 @@
 					object.scale.y = Math.random() + 0.5;
 					object.scale.z = Math.random() + 0.5;
 
-					if (window.innerWidth<1024){
-						object.scale.set(0.5, 0.5, 0.5);
-					}
 					scene.add( object );
 
 				}
