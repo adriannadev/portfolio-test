@@ -204,16 +204,19 @@ canvas{
   .portfolio {
     display: flex;
     flex-direction: column;
+    /* column-width: inherit; */
   }
   .portfolio-item{
     display: flex;
     flex-direction: column;
+    column-width: inherit;
+    /* width: fit-content; */
   }
   .portoflio-overlay {
     opacity: 0.9;
     height: 50%;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
   }
 .portfolio-item-info {
   position: relative;
