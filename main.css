@@ -127,7 +127,9 @@ canvas{
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
-     max-width: 450px;
+     justify-content: space-evenly;
+
+     /* max-width: 300px; */
 /*      
      display: grid;
      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
@@ -143,6 +145,8 @@ canvas{
  .portfolio-item {
   margin: 20px;
   position: relative;
+  max-width: 400px;
+
 }
 
 .portoflio-overlay {
