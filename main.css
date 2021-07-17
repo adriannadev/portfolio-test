@@ -212,8 +212,8 @@ canvas{
   .portoflio-overlay {
     opacity: 0.9;
     height: 50%;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
   }
 .portfolio-item-info {
   position: relative;
