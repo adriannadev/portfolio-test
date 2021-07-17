@@ -123,14 +123,14 @@ canvas{
   }
 }
  .portfolio{
-     /* width: 100%;
+     width: 100%;
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
-     max-width: 450px; */
-     
+     max-width: 450px;
+/*      
      display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
  }
 
  .section-subtitle {
@@ -207,11 +207,11 @@ canvas{
     font-size: 14px;
  }
   .portfolio {
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     /* column-width: inherit; */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
   }
   .portfolio-item{
     display: flex;
