@@ -111,6 +111,12 @@ canvas{
   
  }
 
+ .skill-icon {
+   font-size: 50px;
+   color: var(--clr-secondary);
+
+ }
+
  @media (max-width: 800px) {
   .skills-container{
     display:flex;
