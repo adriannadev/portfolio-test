@@ -266,6 +266,9 @@
 
 					text = new THREE.Mesh( geometry, matLite );
 					text.position.z = - 150;
+					if (window.innerWidth<1024){
+						text.scale.set(0.5, 0.5, 0.5);
+					}
 					scene.add( text );
 
 					// make line shape ( N.B. edge view remains visible )
@@ -306,7 +309,9 @@
 						lineText.add( lineMesh );
 
 					}
-
+					if (window.innerWidth<1024){
+					lineText.scale.set(0.5, 0.5, 0.5)
+				}
 					scene.add( lineText );
 
 				} );
@@ -318,11 +323,7 @@
 			function init( ) {
 
 				camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 10000 );
-				if (window.innerWidth>1024){
-					camera.position.set( 0, -300, 900 );
-				} else {
-					camera.position.set( 0, 0, 0 );
-				}
+				camera.position.set( 0, -300, 900 );
 				
 
 				scene = new THREE.Scene();
@@ -355,10 +356,13 @@
 					object.scale.y = Math.random() + 0.5;
 					object.scale.z = Math.random() + 0.5;
 
-
+					if (window.innerWidth<1024){
+						object.scale.set(0.5, 0.5, 0.5);
+					}
 					scene.add( object );
 
 				}
+
 
 				const canvas = document.querySelector('#canvas-home');
 				renderer = new THREE.WebGLRenderer({canvas});
