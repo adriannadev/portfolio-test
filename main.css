@@ -23,9 +23,9 @@ a:active{
   color: #F38BA0;
 }
 @media (min-width: 800px) {
- a:hover{
-  color: #F38BA0;
-}
+  a:hover{
+    color: #F38BA0;
+  }
 }
 
 h1 {
@@ -96,10 +96,11 @@ canvas{
 
 }
 .content {
-    margin: 3%;
+    margin: 3% 20%;
     padding: 3% 5%;
     border-radius: 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.95);
+    text-align: center;
 }
 
 /* */
@@ -110,6 +111,7 @@ canvas{
  }
  .skill{
    width: 30%;
+   margin: 0 auto;
  }
  .skill h3 {
   text-align: center;
@@ -124,31 +126,22 @@ canvas{
  }
 
  @media (max-width: 800px) {
+   .content {
+    margin: 3% 5%;
+   }
   .skills-container{
     display:flex;
     flex-direction: column;
+    padding: 2% 10%;
+    font-size: 14px;
     
   }
   .skill{
     width: 100%;
-    text-align: justify;
   }
 }
  .portfolio{
    text-align: center;
-     /* width: 100%;
-     padding: 30px; */
-     /* max-width: 600px;
-     text-align: center; */
-     /* display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
-     justify-content: space-evenly; */
-
-     /* max-width: 300px; */
-/*      
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
  }
 
  .section-subtitle {
@@ -158,32 +151,21 @@ canvas{
  .section-subtitle:hover {
   color: var(--clr-secondary);
  }
+
  .portfolio-item {
   position: relative;
   height: 600px;
   display: none;
-  
-  /* margin: 20px;
-  position: relative;
-  width: 30%;
-  max-width: 400px; */
-  /* flex-basis: 30%; */
-
 }
 
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  /* width: auto;
-  padding: 16px;
-  margin-top: -22px; */
   color: #333;
   font-weight: bold;
   font-size: 50px;
   transition: 0.6s ease;
-
-  /* user-select: none; */
 }
 .next {
   right: 30%;
@@ -224,55 +206,44 @@ canvas{
 
 .portoflio-overlay {
   text-align: center;
-  background-color: var(--clr-accent);
+  /* background-color: var(--clr-secondary); */
   width: 600px;
   margin: 0 auto;
-  /* position: relative; */
-  /* top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; */
-  /* width: 500px;
-  height: 300px; */
-  /* opacity: 0; */
-  /* transition: 0.5s ease;
-  background-color: var(--clr-accent);
-  display: block;
-  justify-content: center; */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
 }
 
 .portfolio-item-info {
-  display: flex;
-  flex-direction: column;
-  color: var(--clr-secondary);
+  /* display: flex;
+  flex-direction: column; */
+  color:var(--clr-secondary);
+  padding: 2% 0; 
   font-size: 14px;
   text-transform: lowercase;
   letter-spacing: 0.5px;
-  /* margin: 0; */
   text-align: center;
 }
-/* .portfolio-item:hover .portoflio-overlay {
-  opacity: 0.9;
-} */
+
 .portfolio-item h3 {
-  color: var(--clr-text);
+  color: var(--clr-accent);
 }
 .portfolio-item a {
+  font-size: 20px;
   text-decoration: none;
-  display: block;
-  color: var(--clr-text);
+  display: inline;
+  color: var(--clr-accent);
+}
+.portfolio-item a:hover {
+  color: var(--clr-secondary);
 }
 
-.portfolio-item a:hover {
-  color: var(--clr-text);
-}
 .portfolio-item p {
   margin-top: 0.2em;
 }
 
 .portfolio-img {
   width: 600px;
-  /* height: 150px; */
   object-fit: cover;
 }
 
@@ -288,14 +259,7 @@ canvas{
     font-size: 14px;
  }
   .portfolio {
-    
-    /* display: flex;
-    flex-direction: column; */
     padding: 5%;
-    /* column-width: inherit; */
-    /* display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
-    /* height: 400px; */
   }
   .portfolio-item{
     display: flex;
@@ -306,17 +270,12 @@ canvas{
   }
   .portoflio-overlay {
     opacity: 0.9;
-    /* height: 30%; */
     width: 300px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     margin: 0 auto;
   }
-.portfolio-item-info {
-    /* position: relative;
-    padding: 2% 0;
-    font-size: 13px; */
-  }
+
   .portfolio-img {
     width: 300px;
     height: 150px;
@@ -341,30 +300,30 @@ canvas{
 }
 
 .about-me {
-  /* margin: 0 auto; */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  text-align: center;
+}
+
+.about-me img {
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 100px;
 }
 .about-me-body{
   width: 80%;
-  margin:0;
-  text-align: justify;
+  margin: 0 auto;
+
+  text-align: center;
 }
 .about-me-img {
-  /* position: relative;
-  margin: 0; */
+
   max-height: 400px;
 }
 @media (max-width: 800px) {
-  .about-me{
-    display:flex;
-    flex-direction: column;
- }
- .about-me-body{
-  width: 100%;
-  margin:0;
-}
- .skill{
-  width: 100%;
-}
+    .about-me{
+      padding: 2% 10%;
+      font-size: 14px;
+
+    }
 }
