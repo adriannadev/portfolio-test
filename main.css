@@ -306,6 +306,26 @@ canvas{
   flex-direction: column;
   text-align: center;
 }
+.about h2 {
+  width: 40ch;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid var(--clr-secondary); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 1em auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+  typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+  
+}
+@keyframes typing {
+  from { width: 0 }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  50% { border-color: transparent }
+}
 
 .about-me img {
   width: 200px;

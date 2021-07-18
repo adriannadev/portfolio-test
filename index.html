@@ -18,8 +18,8 @@
 			<nav class="nav">
 				<ul class="nav-list" id="menu">
 					<li class="nav-item" data-menuanchor="home"><a href="#home" class="nav-link" >Home</a></li>|
-					<li class="nav-item" data-menuanchor="skills"><a href="#skills" class="nav-link"">Skills</a></li>|
 					<li class="nav-item" data-menuanchor="about"><a href="#about" class="nav-link">About</a></li>|
+					<li class="nav-item" data-menuanchor="skills"><a href="#skills" class="nav-link"">Skills</a></li>|
 					<li class="nav-item" data-menuanchor="projects"><a href="#projects" class="nav-link">Projects</a></li>|
 					<li class="nav-item"><a href="mailto:addie.nosal@gmail.com"><i class="fas fa-envelope"></i></a></li> | 
 					<li class="nav-item"><a href="https://github.com/adriannadev" target="_blank"><i class="fab fa-github"></i></a></li> | 
@@ -31,7 +31,24 @@
 
 
 		<div id="fullpage">
-			<div  class="section" data-anchor="home"></div>
+			<div class="section" data-anchor="home"></div>
+			<div class="section" data-anchor="about">
+				<div class = "content about" >
+				<h1>who am i?</h1>
+				<h2> a creative developer based in UK</h2>
+				<div class="about-me">
+					<img src="img/me.jpg" alt="">
+				
+				<p>I graduated with first class in BSc(Hons) Computer Science and Multimedia from Queen Mary, 
+					University in London. I'm currently working as a software engineer in finance. However, 
+					having studied design at Goldsmiths before, I want to combine my creativity with enthusiasm for 
+					coding. I am very interested in working with aesthetic designs, games, AR/VR and I spend most of 
+					my free time making games in Unity or learning 3D modelling and animation in Blender and Autodesk Maya.
+				</p>
+					
+				</div>
+			</div>
+				</div>
 		<div class="section" data-anchor="skills">
 			<div class = "content" >
 			<h1>skills</h1>
@@ -48,7 +65,7 @@
 				<div class="skill">
 					<h3><i class="fab fa-java skill-icon"></i></h3>
 					<h3>java</h3>
-					<p>I gained a lot of experience using Java during my time at university and in trainings after my graduation. 
+					<p>I' gained a lot of experience using Java during my time at university 'and in trainings after my graduation. 
 						At my current position I'm actively involved in development of a Spring application hosted on Kubernetes on the internal cloud.
 						<br/>
 						Also, during my exchange at Nanyang Technological University, as a group project I made an Android application for cyclers using Google Maps API.
@@ -67,23 +84,6 @@
 			</div>
 		</div>
 		</div>
-		<div class="section" data-anchor="about">
-			<div class = "content about" >
-			<h1>who am i?</h1>
-			<h2> a creative developer based in UK</h2>
-			<div class="about-me">
-				<img src="img/me.jpg" alt="">
-			
-			<p>I graduated with first class in BSc(Hons) Computer Science and Multimedia from Queen Mary, 
-				University in London. I'm currently working as a software engineer in finance. However, 
-				having studied design at Goldsmiths before, I want to combine my creativity with enthusiasm for 
-				coding. I am very interested in working with aesthetic designs, games, AR/VR and I spend most of 
-				my free time making games in Unity or learning 3D modelling and animation in Blender and Autodesk Maya.
-			</p>
-				
-			</div>
-		</div>
-			</div>
 		<div class="section" data-anchor="projects">
 			<div class = "content projects" >
 				
@@ -275,7 +275,7 @@
 		//Fullpage.js
 		var myFullpage = new fullpage('#fullpage', {
 		navigation: true,
-		anchors: ['home', 'skills', 'about', 'projects', 'contact'],
+		anchors: ['home', 'about', 'skills', 'projects', 'contact'],
 		menu: '#menu',
 		verticalCentered: true,
 		responsiveWidth: 1024,
