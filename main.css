@@ -91,7 +91,7 @@ canvas{
 }
 .content {
     margin: 3%;
-    padding: 5%;
+    padding: 3% 5%;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
 }
@@ -151,7 +151,9 @@ canvas{
  .portfolio-item {
   margin: 20px;
   position: relative;
+  width: 30%;
   max-width: 400px;
+  /* flex-basis: 30%; */
 
 }
 
@@ -174,7 +176,7 @@ canvas{
   display: flex;
   flex-direction: column;
   color: var(--clr-secondary);
-  font-size: 1em;
+  font-size: 14px;
   text-transform: lowercase;
   letter-spacing: 0.5px;
   margin: 0;
