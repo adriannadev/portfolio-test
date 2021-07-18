@@ -163,6 +163,10 @@ header{
   display: inline-block;
   cursor: pointer;
 }
+
+.projects h2 {
+  margin: 1%;
+}
 .section-subtitle:hover {
   color: var(--clr-secondary);
 }
