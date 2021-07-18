@@ -226,7 +226,7 @@ header{
 
 .portoflio-overlay {
   text-align: center;
-  width: 500px;
+  width: 400px;
   margin: 0 auto;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -244,6 +244,7 @@ header{
 
 .portfolio-item h3 {
   color: var(--clr-accent);
+  margin: .1em;
 }
 
 .portfolio-item a {
@@ -258,11 +259,11 @@ header{
 }
 
 .portfolio-item p {
-  margin-top: 0.2em;
+  margin: .1em;
 }
 
 .portfolio-img {
-  width: 500px;
+  width: 400px;
   object-fit: cover;
 }
 
