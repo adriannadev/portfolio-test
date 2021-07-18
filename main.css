@@ -154,6 +154,7 @@ canvas{
  }
  .portfolio-item {
   position: relative;
+  height: 600px;
   display: none;
   
   /* margin: 20px;
@@ -162,6 +163,27 @@ canvas{
   max-width: 400px; */
   /* flex-basis: 30%; */
 
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  /* width: auto;
+  padding: 16px;
+  margin-top: -22px; */
+  color: #333;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+
+  /* user-select: none; */
+}
+.next {
+  right: 30%;
+}
+.prev {
+  left: 30%;
 }
 .dot {
   height: 15px;
@@ -174,7 +196,7 @@ canvas{
 }
 
 .active-dot {
-  background-color: #000000;
+  background-color: var(--clr-accent);
 }
 
 .fade {
@@ -267,17 +289,18 @@ canvas{
     /* column-width: inherit; */
     /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+    /* height: 400px; */
   }
   .portfolio-item{
     display: flex;
     flex-direction: column;
     column-width: inherit;
-   
-    
+    height: 350px;
+
   }
   .portoflio-overlay {
     opacity: 0.9;
-    height: 20%;
+    /* height: 30%; */
     width: 300px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -292,6 +315,14 @@ canvas{
     width: 300px;
     height: 150px;
     object-fit: cover;
+  }
+
+  .next {
+    right: 2%;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev {
+    left: 2%;
   }
 }
 

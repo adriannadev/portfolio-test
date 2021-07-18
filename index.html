@@ -94,7 +94,7 @@
 			</div>
 		</div>
 			</div>
-		<div class="section fp-auto-height-responsive" data-anchor="projects">
+		<div class="section" data-anchor="projects">
 			<div class = "content projects" >
 				
 			<h1> Projects</h1>
@@ -156,6 +156,8 @@
 
 						<img src="img/todolist.png" class="portfolio-img"> 
 				</div>
+				<a class="prev" onclick="plusSlides(-1)">❮</a>
+ 				 <a class="next" onclick="plusSlides(1)">❯</a>
 				<div style="text-align:center">
 					<span class="dot"></span> 
 					<span class="dot"></span> 
@@ -204,6 +206,8 @@
 							</div>
 							<img src="img/bowling.png" class="portfolio-img"> 
 						</div>
+						<a class="prev" onclick="plusSlides(-1)">❮</a>
+  						<a class="next" onclick="plusSlides(1)">❯</a>
 						<div style="text-align:center">
 							<span class="dot"></span> 
 							<span class="dot"></span> 
@@ -219,10 +223,28 @@
 	<script type="application/javascript">
 
 		// Slideshow
-		var slideIndex = 0;
-		showSlides();
+		var slideIndex = 1;
+		showSlides(slideIndex);
+		myTimer = setInterval(()=> plusSlides(1), 3000);
 
-		function showSlides() {
+		function plusSlides(n) {
+			clearInterval(myTimer);
+			if (n<0){
+				showSlides(slideIndex-=1)
+			} else {
+				showSlides(slideIndex+=1)
+			}
+
+			if (n === -1){
+				myTimer = setInterval(()=> plusSlides(n+2), 3000);
+			}
+			else{
+				myTimer = setInterval(()=> plusSlides(n+1), 3000);
+			}
+			
+			console.log(slideIndex);
+		}
+		function showSlides(n) {
 		var i;
 		var projectSection = document.getElementsByClassName('active-section')[0];
 		var slides = projectSection.getElementsByClassName("portfolio-item");
@@ -230,31 +252,35 @@
 		for (i = 0; i < slides.length; i++) {
 			slides[i].style.display = "none";  
 		}
-		slideIndex++;
-		if (slideIndex > slides.length) {slideIndex = 1}    
+		if (n > slides.length) {slideIndex = 1}    
+		if (n < 1) {slideIndex = slides.length}
+
 		for (i = 0; i < dots.length; i++) {
 			dots[i].className = dots[i].className.replace(" active-dot", "");
 		}
 		slides[slideIndex-1].style.display = "block";  
 		dots[slideIndex-1].className += " active-dot";
-		setTimeout(showSlides, 3000); // Change image every 3 seconds
 		}
+
 		// Web/game dev
 		var webDev = document.getElementById('webdev');
 		var gameDev = document.getElementById('gamedev');
+
+
 		function showWeb(){
-			
-			webDev.style.display='block';
 			webDev.className+= " active-section";
-			gameDev.style.display='none';
 			gameDev.className = gameDev.className.replace(" active-section", "");
+			webDev.style.display='block';
+			gameDev.style.display='none';
+
 		}
 
 		function showGame(){
-			gameDev.style.display='block';
 			gameDev.className+= " active-section";
-			webDev.style.display='none';
 			webDev.className = webDev.className.replace(" active-section", "");
+			gameDev.style.display='block';
+			webDev.style.display='none';
+
 		}
 		//Fullpage.js
 		var myFullpage = new fullpage('#fullpage', {
