@@ -18,8 +18,14 @@ a {
     color: var(--clr-accent);
     text-decoration: none;
 }
-a:hover{
+
+a:active{
   color: #F38BA0;
+}
+@media (min-width: 800px) {
+ a:hover{
+  color: #F38BA0;
+}
 }
 
 h1 {
