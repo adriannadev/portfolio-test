@@ -236,7 +236,7 @@ header{
 
 .portfolio-item-info {
   color:var(--clr-secondary);
-  padding: 2% 0; 
+  padding-bottom: 1%;
   font-size: 14px;
   text-transform: lowercase;
   letter-spacing: 0.5px;
